@@ -36,7 +36,20 @@
         </div>
 
 <script>
-    var color = ['#24282d','#550033','#0099ff','#003355','#00a172','#a800ff','#00d2ff','#7e00ff','#960058','#cb1831','#6e1160','#2a0f6f','#1aecae','#555', '#04C1BE'][Math.floor(Math.random()*15)];
+    var color = ['#550033','#0099ff','#003355','#00a172','#a800ff','#00d2ff','#7e00ff','#960058','#cb1831','#6e1160','#2a0f6f','#1aecae', '#04c1be'][Math.floor(Math.random()*13)];
+
+    var short_icon = document.createElement('link');
+    short_icon.type = 'image/x-icon';
+    short_icon.rel = 'shortcut icon';
+    short_icon.href = color.replace('#','') + '.ico';
+
+    var icon = document.createElement('link');
+    icon.type = 'image/x-icon';
+    icon.rel = 'icon';
+    icon.href = color.replace('#','') + '.ico';
+
+    document.getElementsByTagName('head')[0].appendChild(short_icon);
+    document.getElementsByTagName('head')[0].appendChild(icon);
     document.body.style.backgroundColor = color;
 </script>
 </body>
