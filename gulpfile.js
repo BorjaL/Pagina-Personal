@@ -9,4 +9,4 @@ gulp.task('copy', function() {
 	return gulp.src('src/**/*').pipe(gulp.dest('web'));
 });
 
-gulp.task('default', ['copy']);
+gulp.task('default', ['clean','copy']);
